@@ -28,6 +28,7 @@ body {
 
 section {
   min-height: 100vh;
+  padding: 8rem 10%;
 }
 
 /* Header */
@@ -70,7 +71,6 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .home-img {
@@ -89,4 +89,107 @@ section {
   top: 0;
   left: 0;
   z-index: -1;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+.home-content h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.home-content h1 {
+  font-size: 5.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.home-content p {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.social-links a {
+  margin: 3rem 1.5rem;
+  color: var(--main-color);
+  font-size: 6rem;
+}
+
+.social-links a:hover {
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  background-clip: text;
+  text-shadow: 0 0 1rem var(--main-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.home-span {
+  color: var(--main-color);
+  position: relative;
+}
+
+.front-span,
+.back-span,
+.full-span {
+  position: absolute;
+  color: transparent;
+  width: 0%;
+  height: 100%;
+  background-color: var(--main-color);
+  background-clip: text;
+  top: 0;
+  left: 0;
+}
+
+.last-span {
+  margin-left: 15rem;
+  color: var(--text-color);
+}
+
+@keyframes anime-front {
+  0% {
+    width: 0%;
+  }
+  15% {
+    width: 100%;
+  }
+  33% {
+    width: 0%;
+  }
+}
+
+@keyframes anime-back {
+  33% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  66% {
+    width: 0%;
+  }
+}
+
+@keyframes anime-full {
+  66% {
+    width: 0%;
+  }
+  80% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+.front-span {
+  animation: anime-front 6s linear infinite;
+}
+
+.back-span {
+  animation: anime-back 6s linear infinite;
+}
+
+.full-span {
+  animation: anime-full 6s linear infinite;
 }
