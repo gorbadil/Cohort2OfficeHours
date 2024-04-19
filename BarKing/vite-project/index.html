@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="output.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind Bar</title>
+</head>
+
+<body>
+  <header class="sticky top-0 z-10" id="navbar">
+    <nav class="container mx-auto p-6 flex justify-between items-center">
+      <div class="flex items-center">
+        <img src="./public/images/logo.svg" class="w-24" alt="">
+        <p class="text-2xl">Bar<span class="text-mainRed">King</span></p>
+      </div>
+      <div>
+        <a href="#">Pricing</a>
+        <a href="#">About Us</a>
+        <a href="#">Careers</a>
+        <a href="#">Community</a>
+      </div>
+    </nav>
+  </header>
+  <section class="container mx-auto">
+    <div class="flex items-center gap-12">
+      <div class="flex flex-col gap-12 ">
+        <h1 class="text-6xl font-bold">King of the elite service</h1>
+        <p class="text-darkGrey">We can't solve your problems, but we can help you to forget them.</p>
+        <div>
+          <a href="#" class="bg-mainRed hover:bg-mainRedLigth px-6 py-2 rounded-full">Book a Table</a>
+        </div>
+      </div>
+      <div class="hero-img">
+
+        <img src="./public/cocktail.jpg" class="" alt="">
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="bg-ligthGrey py-12">
+    <div id="btnsDiv" class="container mx-auto grid grid-cols-4 gap-8">
+      <button id="coctail" class="bg-mainRed px-4 py-2 rounded-lg hover:bg-mainRedLigth">Coctail</button>
+      <button id="service" class="bg-mainRed px-4 py-2 rounded-lg hover:bg-mainRedLigth">Service</button>
+      <button id="carPark" class="bg-mainRed px-4 py-2 rounded-lg hover:bg-mainRedLigth">Car Park</button>
+      <button id="liveActions" class="bg-mainRed px-4 py-2 rounded-lg hover:bg-mainRedLigth">Live Actions</button>
+    </div>
+    <div id="feat-cont" class="container mx-auto flex flex-wrap align-middle gap-10 py-10 justify-center">
+      <div class="flex flex-col justify-center align-middle gap-10 w-5/12">
+        <h2 class="text-2xl">Coctail</h2>
+        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, nihil recusandae. Atque, illum corporis
+          odio
+          pariatur ad harum non, molestias maiores molestiae sapiente perferendis veniam earum fugit ipsum repellendus
+          architecto ducimus explicabo reiciendis alias quasi culpa libero amet similique nisi!</p>
+      </div>
+      <img class="w-96" src="./public/images/cocktails.jpg" alt="">
+    </div>
+  </section>
+
+  <section class="container mx-auto py-10 flex flex-col">
+    <h2 class="text-2xl mx-auto">Gallery</h2>
+    <div id="galleryDiv" class="flex justify-around py-10">
+      <button id="left">Left</button>
+      <img id="gallery" src="./public/images/cocktails.jpg" alt="">
+      <button id="right">Right</button>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>

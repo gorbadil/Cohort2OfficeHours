@@ -1,0 +1,16 @@
+{
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "tail": "npx tailwindcss -i ./input.css -o ./output.css --watch",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.3",
+    "vite": "^5.2.0"
+  }
+}
