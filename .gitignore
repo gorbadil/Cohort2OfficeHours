@@ -1,18 +1,4 @@
-.DS_Store
+.vscode
 .env
-
-# Node files
-node_modules/
-npm-debug.log
-yarn-error.log
-
-# Build files
-dist/
-build/
-
-# Logs
-logs/
-*.log
-
-
+node_modules
 
