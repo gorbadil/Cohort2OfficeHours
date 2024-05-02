@@ -1,26 +1,29 @@
 import "./App.css";
-import { useState } from "react";
-import NewComp from "./newComp";
-
+import React, { useState } from "react";
+import Card from "./card";
+import Hebele from "./Children";
 export default App;
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  const handleClick = () => {
-    setCount(function (hebele) {
-      hebele + 1;
-    });
-  };
+  const [cohort, setCohort] = useState("cohort 2");
 
   return (
     <div>
-      {/* {NewComp(name)} 
-      {NewComp("ersin")} */}
-      <NewComp yazi={count} soyad={"mutlu"} />
-      <button onClick={handleClick}>Click</button>
+      <Card cardCohort={cohort} cardState={setCohort} />
+      <Hebele hebeleCohort={cohort}>
+        <h1>Ersin</h1>
+      </Hebele>
     </div>
   );
 }
 
-document.createElement("div");
+// <Card cardCohort={cohort} cardState={setCohort} />
+
+{
+  /* <Hebele>
+  <h1>Ersin</h1>
+</Hebele>
+
+
+<Hebele children={<h1>Ersin</h1>}/> */
+}
