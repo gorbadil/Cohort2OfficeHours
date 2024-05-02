@@ -10,3 +10,8 @@ function Hebele({ children, hebeleCohort }) {
 }
 
 export default Hebele;
+
+// const prop = {
+//   children: <h1>Ersin</h1>,
+//   hebeleCohort: cohort,
+// };
