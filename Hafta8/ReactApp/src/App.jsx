@@ -1,29 +1,14 @@
 import "./App.css";
-import React, { useState } from "react";
-import Card from "./card";
-import Hebele from "./Children";
+import Counter from "./CounterApp/Counter";
 export default App;
+import ReactMeme from "./assets/maxresdefault.jpg";
 
 function App() {
-  const [cohort, setCohort] = useState("cohort 2");
-
   return (
     <div>
-      <Card cardCohort={cohort} cardState={setCohort} />
-      <Hebele hebeleCohort={cohort}>
-        <h1>Ersin</h1>
-      </Hebele>
+      <h1>Cohort 2</h1>
+      <Counter />
+      <img src={ReactMeme} alt="" />
     </div>
   );
-}
-
-// <Card cardCohort={cohort} cardState={setCohort} />
-
-{
-  /* <Hebele>
-  <h1>Ersin</h1>
-</Hebele>
-
-
-<Hebele children={<h1>Ersin</h1>}/> */
 }
