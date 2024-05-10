@@ -1,0 +1,8 @@
+.deactive {
+  border: none;
+  background-color: transparent;
+}
+
+.completed {
+  background-color: green;
+}
