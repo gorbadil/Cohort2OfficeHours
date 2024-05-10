@@ -80,6 +80,28 @@ function App() {
     );
   };
 
+  const handleAddFixTodo = (todo) => {
+    setTodos([...todos, todo]);
+  };
+
+  const fixTodo = [
+    {
+      id: 102,
+      title: "Su",
+      completed: false,
+    },
+    {
+      id: 103,
+      title: "Ekmek",
+      completed: false,
+    },
+    {
+      id: 104,
+      title: "çamur",
+      completed: false,
+    },
+  ];
+
   return (
     <>
       <h1>Discord</h1>
@@ -93,6 +115,18 @@ function App() {
       <br />
       <br />
       <button onClick={handleAddNewTodo}>Todo Ekle</button>
+      <hr />
+      <br />
+      <br />
+      {fixTodo.map((todo) => (
+        <button key={todo.id} onClick={() => handleAddFixTodo(todo)}>
+          {todo.title}
+        </button>
+      ))}
+      <br />
+      <br />
+      <br />
+
       <hr />
       <div className="todo">
         {todos.map((todo) => (
