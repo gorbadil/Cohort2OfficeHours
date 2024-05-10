@@ -1,5 +1,5 @@
 {
-  "name": "hafta9officehour",
+  "name": "hafta9powerhour",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,14 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.4",
-    "@mui/icons-material": "^5.15.17",
-    "@mui/material": "^5.15.17",
     "axios": "^1.6.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.23.0",
-    "styled-components": "^6.1.10"
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

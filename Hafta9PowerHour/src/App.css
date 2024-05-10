@@ -1,0 +1,26 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2em;
+  flex-direction: column;
+  background-color: #888;
+  width: 100vw;
+  padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 10rem;
+}
+
+li {
+  cursor: pointer;
+}
+
+.selected {
+  color: black;
+  font-size: larger;
+}
