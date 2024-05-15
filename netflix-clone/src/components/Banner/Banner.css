@@ -1,0 +1,50 @@
+.banner {
+  height: 450px;
+  color: white;
+}
+
+.banner-contents {
+  height: 200px;
+  margin-left: 40px;
+  padding-top: 150px;
+}
+
+.banner-title {
+  font-size: 3em;
+  font-weight: 800;
+  padding-bottom: 0.3em;
+}
+.banner-desc {
+  width: 45em;
+  padding-top: 1em;
+  font-size: 1.2em;
+  max-width: 360px;
+  line-height: 1.3;
+}
+
+.banner-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.banner-button {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1rem;
+}
+
+.play {
+  background-color: white;
+  color: black;
+}
+
+.info {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
