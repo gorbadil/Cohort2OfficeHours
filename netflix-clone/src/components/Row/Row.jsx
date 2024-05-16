@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import RowItem from "../RowItem/RowItem";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -7,6 +7,7 @@ import "./Row.css";
 
 function Row({ title, fetchURL, id }) {
   const [movies, setMovies] = useState([]);
+  const moviesRef = useRef(null);
 
   useEffect(() => {
     async function fetchData() {
@@ -26,13 +27,14 @@ function Row({ title, fetchURL, id }) {
           <span
             className="arrow"
             onClick={() => {
-              document.getElementById(id).scrollLeft -= window.innerWidth - 80;
+              // document.getElementById(id).scrollLeft -= window.innerWidth - 80;
+              moviesRef.current.scrollLeft -= window.innerWidth - 80;
             }}
           >
             <ArrowBackIosIcon />
           </span>
         </div>
-        <div id={id} className="row-posters">
+        <div id={id} ref={moviesRef} className="row-posters">
           {movies?.map((movie) => (
             <RowItem key={movie.id} movie={movie} />
           ))}
@@ -41,7 +43,9 @@ function Row({ title, fetchURL, id }) {
           <span
             className="arrow"
             onClick={() => {
-              document.getElementById(id).scrollLeft += window.innerWidth - 80;
+              console.log(moviesRef)
+              // document.getElementById(id).scrollLeft += window.innerWidth - 80;
+              moviesRef.current.scrollLeft += window.innerWidth - 80;
             }}
           >
             <ArrowForwardIosIcon />

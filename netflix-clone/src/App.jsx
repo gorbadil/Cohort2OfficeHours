@@ -2,23 +2,23 @@ import "./App.css";
 import Banner from "./components/Banner/Banner";
 import Navbar from "./components/Navbar/Navbar";
 import Row from "./components/Row/Row";
-import requests from "./API/requests";
+import { rows } from "./helper/Rows";
+import reactImage from "../public/viteImage.png"
+
+
 
 function App() {
   return (
     <div className="app">
       <Navbar />
       <Banner />
-      <Row
-        title="NETFLIX ORIGINALS"
-        fetchURL={requests.fetchNetflixOriginals}
-        id="ORIGINALS"
-      />
-      <Row
-        title="NETFLIX ORIGINALS"
-        id="NO"
-        fetchURL={requests.fetchNetflixOriginals}
-      />
+      {rows.map(row => (
+        <Row 
+        key={row.id} 
+        title={row.title} 
+        fetchURL={row.fetchURL} 
+        id={row.id} />
+      ))}
     </div>
   );
 }
