@@ -1,0 +1,12 @@
+apiVersion: asd
+kind: Pod
+metadata:
+  name: myapp-pod
+  labels:
+    app: nginx
+    tier: front-end
+
+spec:
+  containers:
+    - name: nginx
+      image: nginx
