@@ -20,6 +20,7 @@ const pagesRouter = [
   { route: "author", title: "Author" },
   { route: "category", title: "Category" },
   { route: "publisher", title: "Publisher" },
+  { route: "book", title: "Book" },
 ];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 

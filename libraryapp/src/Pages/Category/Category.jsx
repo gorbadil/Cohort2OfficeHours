@@ -62,6 +62,7 @@ function Category() {
 
   const handleUpdateCategoryBtn = (e) => {
     const index = e.target.id;
+    // const newCteg = category.find((categ)=> categ.id === id)
     setUpdateCategory({ ...category[index] });
   };
 
@@ -178,3 +179,5 @@ function Category() {
 }
 
 export default Category;
+
+// docker-compose up --build
